@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Jokenpô</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-F3w7mX95PdgyTmZZMECAngseQB83DfGTowi0iMjiWaeVhAn4FJkqJByhZMI3AhiU" crossorigin="anonymous">
+    <link href="./css/style.css" rel="stylesheet">
+    <script src="./js/script.js"></script>
+</head>
+
+<body>
+    <header>
+        <h1 class="text-center fs-2 my-5">Jokenpô</h1>
+    </header>
+    <div class="container">
+        <section class="bg-white row text-center my-5">
+            <div class="col-8 mx-auto mt-3 alert d-none fw-bold" role="alert">
+                <span id="alert-usuario" class="fs-4"></span>
+            </div>
+            <div class="col-6 p-5">
+                <span class="d-block h3 vitorias-Jogador1">0 vitórias</span>
+                <span class="d-block py-3 h4">Jogador 1</span>
+                <select class="form-select" aria-label="Default select example" id="escolha-Jogador">
+                    <option selected disabled>Escolha sua opção</option>
+                    <option value="Papel">Papel</option>
+                    <option value="Pedra">Pedra</option>
+                    <option value="Tesoura">Tesoura</option>
+                </select>
+            </div>
+            <div class="col-6 p-5">
+                <span class="d-block h3 vitorias-Jogador2">0 vitórias</span>
+                <span class="d-block py-3 h4">Jogador 2</span>
+                <select class="form-select" aria-label="Default select example" disabled id="escolha-Computador">
+                    <option selected disabled>Opção do jogador 2</option>
+                    <option value="Papel">Papel</option>
+                    <option value="Pedra">Pedra</option>
+                    <option value="Tesoura">Tesoura</option>
+                </select>
+
+            </div>
+            <button type="button" class="col-6 btn btn-success mx-auto mb-5 p-3" onclick="jokenpo.jogar()"
+                id="botao-jogar">Jogar</button>
+        </section>
+        <section class="bg-white row text-center py-5 my-5">
+            <div class="container">
+                <table class="table table-striped">
+                    <thead>
+                        <tr>
+                            <th scope="col">Jogador 1</th>
+                            <th scope="col">Jogador 2</th>
+                            <th scope="col">Vencedor</th>
+                        </tr>
+                    </thead>
+                    <tbody id="table-body"></tbody>
+                </table>
+            </div>
+        </section>
+    </div>
+
+</body>
+
+</html>
